@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', function() {
         channelSubs.textContent = `${Math.floor(Math.random() * 5) + 1}M subscribers`;
         
         // Set video source to match video number
-        mainVideo.src = `https://watchmp4.github.io/media/${video.id}.mp4`;
+        mainVideo.src = `https://watchmp4.github.io/media/videos/${video.id}.mp4`;
         
         generateRelatedVideos(video);
         
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     function generateDownloadLink(videoNum) {
-        const url = `https://watchmp4.github.io/media/${videoNum}.mp4`;
+        const url = `https://watchmp4.github.io/media/videos/${videoNum}.mp4`;
         downloadUrl.href = url;
         
         generateDownload.innerHTML = '<i class="fas fa-check"></i> Done';
@@ -392,4 +392,5 @@ document.addEventListener('DOMContentLoaded', function() {
     loadMoreVideos(); // Load initial videos
     displayTrendingVideos();
     setupAdsTimer(); // Start ads timer
+
 });
